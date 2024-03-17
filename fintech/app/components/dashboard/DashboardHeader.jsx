@@ -88,12 +88,10 @@ export default function DashboardHeader() {
         try {
             const response = await axios.request(options);
             setAPIData(response.data);
-            console.log(APIData);
         } catch (error) {
             console.error(error);
         }
     }
-console.log("api data ",APIData)
     return (
         <div>
             <header className="w-11/12 flex justify-between mt-4 items-center">
@@ -156,27 +154,26 @@ class App extends Component {
                 name: "RELIANCE BSE",
                 yValueFormatString: "$###0.00",
                 xValueFormatString: "MMMM YY",
-                dataPoints: 
-                // newdata
-                [
-                    { x: new Date("2024-03-15"), y: [2854.95, 2866.45, 2826.9, 2837.25] },
-                    { x: new Date("2024-03-14"), y: [2865, 2897.35, 2851, 2865.25] },
-                    { x: new Date("2024-03-13"), y: [2955.45, 2965.95, 2855.85, 2864.7] },
-                    { x: new Date("2024-03-12"), y: [2932, 2976.3, 2932, 2950.2] },
-                    { x: new Date("2024-03-11"), y: [2984.7, 2984.7, 2927.35, 2931.2] },
-                    { x: new Date("2024-03-07"), y: [3002.15, 3005.9, 2951.25, 2958.1] },
-                    { x: new Date("2024-03-06"), y: [2989.45, 3019, 2957, 3005.95] },
-                    { x: new Date("2024-03-05"), y: [3011.7, 3011.7, 2973, 2998.3] },
-                    { x: new Date("2024-03-04"), y: [2981, 3024.8, 2975.05, 3011.6] },
-                    { x: new Date("2024-03-03"), y: [2916.7, 2999, 2916.7, 2986] }
-                ]
+                dataPoints:
+                    // newdata
+                    [
+                        { x: new Date("2024-03-15"), y: [2854.95, 2866.45, 2826.9, 2837.25] },
+                        { x: new Date("2024-03-14"), y: [2865, 2897.35, 2851, 2865.25] },
+                        { x: new Date("2024-03-13"), y: [2955.45, 2965.95, 2855.85, 2864.7] },
+                        { x: new Date("2024-03-12"), y: [2932, 2976.3, 2932, 2950.2] },
+                        { x: new Date("2024-03-11"), y: [2984.7, 2984.7, 2927.35, 2931.2] },
+                        { x: new Date("2024-03-07"), y: [3002.15, 3005.9, 2951.25, 2958.1] },
+                        { x: new Date("2024-03-06"), y: [2989.45, 3019, 2957, 3005.95] },
+                        { x: new Date("2024-03-05"), y: [3011.7, 3011.7, 2973, 2998.3] },
+                        { x: new Date("2024-03-04"), y: [2981, 3024.8, 2975.05, 3011.6] },
+                        { x: new Date("2024-03-03"), y: [2916.7, 2999, 2916.7, 2986] }
+                    ]
 
             }
             ]
         }
         return (
             <div>
-                {console.log(newdata)}
                 < CanvasJSChart options={options}
                     onRef={ref => this.chart = ref}
                 />
