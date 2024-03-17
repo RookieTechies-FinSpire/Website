@@ -70,14 +70,14 @@ export function XXNetwork({ children }: { children: React.ReactNode }) {
 export function XXLogs() {
     const [logs, setLogs] = useState([])
 
-    useEffect(() => {
-        const hookedConsole = Hook(
-            window.console,
-            (log) => setLogs((currLogs) => [...currLogs, log]),
-            false
-        )
-        return () => Unhook(hookedConsole)
-    }, [])
+    // useEffect(() => {
+    //     const hookedConsole = Hook(
+    //         window.console,
+    //         (log) => setLogs((currLogs) => [...currLogs, log]),
+    //         false
+    //     )
+    //     return () => Unhook(hookedConsole)
+    // }, [])
 
     return (
         <div className="flex [overflow-anchor:none]">
