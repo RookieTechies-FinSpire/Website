@@ -11,7 +11,7 @@ import { MdOutlineFeed, MdChatBubble, MdLogout } from "react-icons/md";
 import { IoIosSettings } from "react-icons/io";
 import { IoAnalytics } from "react-icons/io5";
 import { usePathname } from "next/navigation";
-
+import Script from "next/script";
 export default function Navbar() {
     const { user, logOut } = UserAuth();
     const path = usePathname();
@@ -40,8 +40,8 @@ export default function Navbar() {
         <>
             {(path === "/") ?
                 <header className={styles.navbar}>
-                    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
-                    <script src="https://mediafiles.botpress.cloud/ca12c9ca-3375-4deb-b5c6-7ef13312a8b6/webchat/config.js" defer></script>
+                    <Script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></Script>
+                    <Script src="https://mediafiles.botpress.cloud/ca12c9ca-3375-4deb-b5c6-7ef13312a8b6/webchat/config.js" defer></Script>
                     <div className={styles.navbar_content}>
                         <Link href="/"><p>RookieTechies</p></Link>
                         <div className={styles.navbar_menu}>

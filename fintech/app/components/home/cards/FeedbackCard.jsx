@@ -8,7 +8,7 @@ export default function FeedbackCard({ name, description }) {
             <div className={styles.feedback_image}>
                 {(name) ? name[0] : ""}
             </div>
-            <Image src={stars} width={"80%"} />
+            <Image src={stars} alt="stars" width={"80%"} />
             <p>{(name) ? name : ""}</p>
             <span>{(description) ? description : ""}</span>
         </div>
