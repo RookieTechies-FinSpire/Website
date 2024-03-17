@@ -40,7 +40,7 @@ export default function Navbar() {
         <>
             {(path === "/") ?
                 <header className={styles.navbar}>
-                    <Script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></Script>
+                    <Script src="https://cdn.botpress.cloud/webchat/v1/inject.js" defer></Script>
                     <Script src="https://mediafiles.botpress.cloud/ca12c9ca-3375-4deb-b5c6-7ef13312a8b6/webchat/config.js" defer></Script>
                     <div className={styles.navbar_content}>
                         <Link href="/"><p>RookieTechies</p></Link>

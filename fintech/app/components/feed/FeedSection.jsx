@@ -3,7 +3,8 @@ import { storage } from "../../firebase";
 import { useEffect, useState } from "react";
 import { ref as sRef, getDownloadURL } from "firebase/storage";
 import MemeCard from "./MemeCard";
-import styles from "../../../public/styles/feed.module.css"
+import styles from "../../../public/styles/feed.module.css";
+
 export default function FeedSection() {
     const [url, setUrl] = useState([]);
     const fetchList = ["m1.jpg", "m2.jpg", "m3.jpg", "m4.jpg", "m5.jpg", "m6.jpg", "m7.jpg", "m8.jpg", "m9.jpg", "m10.jpg", "m11.jpeg", "m12.jpg", "m13.png", "m14.png", "m15.png", "m16.png", "m17.png", "m18.jpg", "m19.jpg", "m20.jpg"];
@@ -26,7 +27,7 @@ export default function FeedSection() {
         for (let i = 0; i < 20; i++) {
             getImageUrl(i);
         }
-    }, []);
+    }, [getImageUrl]);
 
     return (
         <div className="overflow-y-auto">
