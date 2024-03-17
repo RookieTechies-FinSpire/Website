@@ -13,7 +13,7 @@ export const AuthContextProvider = ({ children }) => {
     const googleSignIn = () => {
         const googleprovider = new GoogleAuthProvider();
         signInWithPopup(auth, googleprovider)
-            .then(() => { router.push("/profile") })
+            .then(() => { router.push("/dashboard") })
     }
 
     const appleSignIn = () => {
@@ -42,7 +42,9 @@ export const AuthContextProvider = ({ children }) => {
     }
 
     const logOut = () => {
-        signOut(auth);
+        signOut(auth)
+            .then(() => { router.push("/") })
+
     }
 
     useEffect(() => {

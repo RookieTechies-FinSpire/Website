@@ -48,7 +48,7 @@ export default function SignInCard() {
         try {
             await signInUser(data.loginID, data.password);
             toast.success('Login Successful!');
-            router.push("/profile");
+            router.push("/dashboard");
         }
         catch (error) {
             toast.error('Invalid Credential');

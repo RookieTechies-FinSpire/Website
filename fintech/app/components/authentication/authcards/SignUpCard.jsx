@@ -68,7 +68,7 @@ export default function SignUpCard() {
         try {
             await createUser(data.email, data.password);
             toast.success('Login Successful!');
-            router.push("/profile");
+            router.push("/dashboard");
         }
         catch (error) {
             console.log(error);

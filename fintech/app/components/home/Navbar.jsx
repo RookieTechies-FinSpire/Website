@@ -10,16 +10,12 @@ import { RiAccountCircleLine } from "react-icons/ri";
 import { MdOutlineFeed, MdChatBubble, MdLogout } from "react-icons/md";
 import { IoIosSettings } from "react-icons/io";
 import { IoAnalytics } from "react-icons/io5";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
-    const [scroll, setScroll] = useState(0);
     const { user, logOut } = UserAuth();
+    const path = usePathname();
     const [burgeropen, setBurgerOpen] = useState(false);
-
-    useEffect(() => {
-        setScroll(window.scrollY);
-    }, [scroll], 1000);
-
     const handleClick = () => {
         setBurgerOpen(!burgeropen);
     }
@@ -41,27 +37,28 @@ export default function Navbar() {
     );
 
     return (
-        <header className={(scroll > 80) ? styles.navbaractive : styles.navbar}>
-            <div className={styles.navbar_content}>
-                <Link href="/"><p>RookieTechies</p></Link>
-                <div className={styles.navbar_menu}>
-                    {(!user) ? <button className={styles.signin_btn}><Link href="/signin">Sign In</Link></button> : <p>Hello User</p>}
-                    <Popover placement="bottom-end">
-                        <PopoverTrigger>
-                            <button onClick={() => { handleClick() }} className={(!burgeropen) ? styles.burger : styles.burger + " " + styles.burgeractive}><span></span><span></span><span></span></button>
-                        </PopoverTrigger>
-                        {content}
-                    </Popover>
-                </div>
-                {/* <nav>
-                    <ul>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Contact</li>
-                    </ul>
-                </nav> */}
-            </div>
-        </header >
+        <>
+            {(path === "/") ?
+                <header className={styles.navbar}>
+                    <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+                    <script src="https://mediafiles.botpress.cloud/ca12c9ca-3375-4deb-b5c6-7ef13312a8b6/webchat/config.js" defer></script>
+                    <div className={styles.navbar_content}>
+                        <Link href="/"><p>RookieTechies</p></Link>
+                        <div className={styles.navbar_menu}>
+                            {(!user) ? <button className={styles.signin_btn}><Link href="/signin">Sign In</Link></button> : <p>Hello, {(user) ? user.displayName : "Guest"}</p>}
+                            <Popover placement="bottom-end">
+                                <PopoverTrigger>
+                                    <button onClick={() => { handleClick() }} className={(!burgeropen) ? styles.burger : styles.burger + " " + styles.burgeractive}><span></span><span></span><span></span></button>
+                                </PopoverTrigger>
+                                {content}
+                            </Popover>
+                        </div>
+                    </div>
+                </header >
+                :
+                <><script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+                    <script src="https://mediafiles.botpress.cloud/ca12c9ca-3375-4deb-b5c6-7ef13312a8b6/webchat/config.js" defer></script></>
+            }
+        </>
     )
 }

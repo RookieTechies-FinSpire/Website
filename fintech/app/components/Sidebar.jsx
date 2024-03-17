@@ -1,32 +1,38 @@
-import Image from "next/image";
-// import profile from "../../../public/sidebarprofile.svg";
-import { Amaranth } from "next/font/google";
+'use client'
 
-const amaranth = Amaranth({ subsets: ["latin"], weight: '400' });
+import Image from "next/image";
+import { UserAuth } from "@/app/context/AuthContext";
+import { FaHome } from "react-icons/fa";
+import { MdOutlineFeed, MdChatBubble, MdLogout } from "react-icons/md";
+import { IoIosSettings } from "react-icons/io";
+import { IoAnalytics } from "react-icons/io5";
+import Link from "next/link";
 
 export default function Sidebar() {
+    const { user, logOut } = UserAuth();
     return (
-        <aside className={"left-0 bg-[#0F3941] min-w-50px w-[18vw] p-4 text-white rounded-xl " + amaranth.className}>
-            <div className="flex gap-4 items-center border-b-1 border-b-white py-4">
-                <Image src={"/images/hero/heroSection.svg"} alt={"profile"} width={40} height={40} />
-                <p className="text-xl">Guest</p>
-            </div>
-            <div className="flex gap-4 items-center py-4">
-                {/* <Image src={profile} alt={"profile"} width={40} height={40} /> */}
-                <p className="text-lg">Home</p>
-            </div>
-            <div className="flex gap-4 items-center py-4">
-                {/* <Image src={profile} alt={"profile"} width={40} height={40} /> */}
-                <p className="text-lg">Discussion</p>
-            </div>
-            <div className="flex gap-4 items-center py-4">
-                {/* <Image src={profile} alt={"profile"} width={40} height={40} /> */}
-                <p className="text-lg">Community</p>
-            </div>
-            <div className="flex gap-4 items-center py-4">
-                {/* <Image src={profile} alt={"profile"} width={40} height={40} /> */}
-                <p className="text-lg">Courses</p>
-            </div>
-        </aside>
+        <aside className={"left-0 bg-[#1D1D41] min-h-screen min-w-[80px] max-w-[300px] w-[80px] md:w-[300px] p-4 text-white rounded-xl fixed flex flex-col items-center md:items-start"}>
+            <Link href="/dashboard" className="w-full flex gap-4 items-center border-b-1 border-b-white py-4">
+                <div className="rounded-full bg-white w-[50px] h-[50px] flex justify-center items-center text-xl text-black uppercase"><p>{(user) ? user.displayName[0] : "G"}</p></div>
+                <p className="hidden md:block text-xl">{(user) ? user.displayName : "Guest"}</p>
+            </Link>
+            <Link href="/" className="flex gap-4 items-center py-4">
+                <FaHome className="text-3xl" />
+                <p className="text-lg hidden lg:block">Home</p>
+            </Link>
+            <Link href="/analyse" className="flex gap-4 items-center py-4">
+                <IoAnalytics className="text-3xl" />
+                <p className="text-lg hidden lg:block">Analysis</p>
+            </Link>
+            <Link href="chat" className="flex gap-4 items-center py-4">
+                <MdChatBubble className="text-3xl" />
+                <p className="text-lg hidden lg:block">Chat</p>
+            </Link>
+            <Link href="feed" className="flex gap-4 items-center py-4">
+                <MdOutlineFeed className="text-3xl" />
+                <p className="text-lg hidden lg:block">Feed</p>
+            </Link>
+            {(user) ? <div onClick={() => { logOut() }} className="justify-start flex items-center gap-4 cursor-pointer"><MdLogout className={"text-3xl"} /><p className="text-lg hidden lg:block">Logout</p></div> : <></>}
+        </aside >
     )
 }

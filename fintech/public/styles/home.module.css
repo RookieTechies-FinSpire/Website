@@ -6,19 +6,7 @@
     width: 100vw;
     top: 0;
     height: 80px;
-    z-index: 1000;
-    position: fixed;
-    top: 0;
-}
-
-.navbaractive {
-    background-color: white;
-    color: black;
-    display: flex;
-    width: 100vw;
-    top: 0;
-    height: 80px;
-    z-index: 1000;
+    z-index: 1;
     position: fixed;
     top: 0;
 }
