@@ -1,6 +1,6 @@
 import styles from "../../../public/styles/home.module.css";
 import Image from "next/image";
-import BenefitsCard from "./cards/benefitsCard";
+import BenefitsCard from "./cards/BenefitsCard";
 
 export default function BeneFitSection() {
     const data = ['Personalized Investment Recommendations', 'Real Time Market Insights', 'Awakening Memes', 'Portfolio Optimization', 'Comprehensive Analysis', 'News Summarization'];
