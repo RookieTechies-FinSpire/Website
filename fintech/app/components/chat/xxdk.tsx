@@ -6,11 +6,11 @@ import { Console, Hook, Unhook } from 'console-feed'
 
 import XXNDF from './ndf.json'
 
-import { CMix, DMClient, DMReceivedCallback, XXDKUtils } from '@/public/xxdk-wasm/dist/src';
+import { CMix, DMClient, DMReceivedCallback, XXDKUtils } from '../../../public/xxdk-wasm/dist/src';
 import { Button } from '@nextui-org/button';
 import { Input } from '@nextui-org/input';
 import Dexie from 'dexie';
-import { DBConversation, DBDirectMessage } from '@/public/xxdk-wasm/dist/src/types/db';
+import { DBConversation, DBDirectMessage } from '../../../public/xxdk-wasm/dist/src/types/db';
 const xxdk = require('xxdk-wasm');
 
 // XXContext is used to pass in "XXDKUtils", which
