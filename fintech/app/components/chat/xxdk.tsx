@@ -275,7 +275,7 @@ export function XXDirectMessagesReceived() {
         )
     }
 
-    const msgOut = msgs.map(m => <div className="[overflow-anchor:none]">{m}</div>);
+    const msgOut = msgs.map((m, key) => <div className="[overflow-anchor:none]" key={key}>{m}</div>);
     return (
         msgOut
     )
