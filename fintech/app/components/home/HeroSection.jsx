@@ -2,7 +2,7 @@
 
 import styles from "../../../public/styles/home.module.css";
 import Image from "next/image";
-import { UserAuth } from "@/app/context/AuthContext";
+import { UserAuth } from "../../context/AuthContext";
 import Link from "next/link";
 
 export default function HeroSection() {

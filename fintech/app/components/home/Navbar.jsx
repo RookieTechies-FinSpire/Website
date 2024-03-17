@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "../../../public/styles/home.module.css";
 import { useEffect, useState } from "react";
 import { Popover, PopoverTrigger, PopoverContent, Button } from "@nextui-org/react";
-import { UserAuth } from "@/app/context/AuthContext";
+import { UserAuth } from "../../context/AuthContext";
 import Link from "next/link";
 import { RiAccountCircleLine } from "react-icons/ri";
 import { MdOutlineFeed, MdChatBubble, MdLogout } from "react-icons/md";
