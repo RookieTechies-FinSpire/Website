@@ -4,12 +4,12 @@ import { UserAuth } from "../../context/AuthContext";
 import { FaSearch } from "react-icons/fa";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Component } from 'react';
-import CanvasJSReact from '@canvasjs/react-charts';
+// import { Component } from 'react';
+// import CanvasJSReact from '@canvasjs/react-charts';
 //var CanvasJSReact = require('@canvasjs/react-charts');
 
-var CanvasJS = CanvasJSReact.CanvasJS;
-var CanvasJSChart = CanvasJSReact.CanvasJSChart;
+// var CanvasJS = CanvasJSReact.CanvasJS;
+// var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 
 export default function DashboardHeader() {
     const { user } = UserAuth();
@@ -101,85 +101,85 @@ export default function DashboardHeader() {
                     <p onClick={fetchData} className="text-white text-xl cursor-pointer"><FaSearch /></p>
                 </div>
             </header>
-            <App prop={APIData} />
+            {/* <App prop={APIData} /> */}
 
         </div>
     )
 }
 
-class App extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         data: props.prop,
-    //     }
-    // }
-    // componentDidUpdate(prevProps) {
-    //     if (prevProps.prop !== this.props.prop) {
-    //         this.setState({ data: this.props.prop });
-    //     }
-    // }
+// class App extends Component {
+//     // constructor(props) {
+//     //     super(props);
+//     //     this.state = {
+//     //         data: props.prop,
+//     //     }
+//     // }
+//     // componentDidUpdate(prevProps) {
+//     //     if (prevProps.prop !== this.props.prop) {
+//     //         this.setState({ data: this.props.prop });
+//     //     }
+//     // }
 
-    render() {
-        // const chartdata = this.state.data["Time Series (Daily)"];
-        // let newdata = [];
+//     render() {
+//         // const chartdata = this.state.data["Time Series (Daily)"];
+//         // let newdata = [];
 
-        // for (let key in chartdata) {
-        //     let date = new Date(key);
-        //     let open = chartdata[key]["1. open"];
-        //     let high = chartdata[key]["2. high"];
-        //     let low = chartdata[key]["3. low"];
-        //     let close = chartdata[key]["4. close"];
-        //     let val = { x: date, y: [open, high, low, close] }
-        //     newdata.push(val);
-        // }
+//         // for (let key in chartdata) {
+//         //     let date = new Date(key);
+//         //     let open = chartdata[key]["1. open"];
+//         //     let high = chartdata[key]["2. high"];
+//         //     let low = chartdata[key]["3. low"];
+//         //     let close = chartdata[key]["4. close"];
+//         //     let val = { x: date, y: [open, high, low, close] }
+//         //     newdata.push(val);
+//         // }
 
-        const options = {
-            theme: "dark1", // "light1", "light2", "dark1", "dark2"
-            animationEnabled: true,
-            exportEnabled: true,
-            title: {
-                // text: `${this.state.data["Meta Data"] ? this.state.data["Meta Data"]["2. Symbol"] : ""} Stock Price -  2024`
-                text: `Reliance BSE Stock Price -  2024`
-            },
-            axisX: {
-                valueFormatString: "DD-MMM"
-            },
-            axisY: {
-                prefix: "₹",
-                title: "Price (in INR)"
-            },
-            data: [{
-                type: "candlestick",
-                showInLegend: true,
-                name: "RELIANCE BSE",
-                yValueFormatString: "$###0.00",
-                xValueFormatString: "MMMM YY",
-                dataPoints:
-                    // newdata
-                    [
-                        { x: new Date("2024-03-15"), y: [2854.95, 2866.45, 2826.9, 2837.25] },
-                        { x: new Date("2024-03-14"), y: [2865, 2897.35, 2851, 2865.25] },
-                        { x: new Date("2024-03-13"), y: [2955.45, 2965.95, 2855.85, 2864.7] },
-                        { x: new Date("2024-03-12"), y: [2932, 2976.3, 2932, 2950.2] },
-                        { x: new Date("2024-03-11"), y: [2984.7, 2984.7, 2927.35, 2931.2] },
-                        { x: new Date("2024-03-07"), y: [3002.15, 3005.9, 2951.25, 2958.1] },
-                        { x: new Date("2024-03-06"), y: [2989.45, 3019, 2957, 3005.95] },
-                        { x: new Date("2024-03-05"), y: [3011.7, 3011.7, 2973, 2998.3] },
-                        { x: new Date("2024-03-04"), y: [2981, 3024.8, 2975.05, 3011.6] },
-                        { x: new Date("2024-03-03"), y: [2916.7, 2999, 2916.7, 2986] }
-                    ]
+//         const options = {
+//             theme: "dark1", // "light1", "light2", "dark1", "dark2"
+//             animationEnabled: true,
+//             exportEnabled: true,
+//             title: {
+//                 // text: `${this.state.data["Meta Data"] ? this.state.data["Meta Data"]["2. Symbol"] : ""} Stock Price -  2024`
+//                 text: `Reliance BSE Stock Price -  2024`
+//             },
+//             axisX: {
+//                 valueFormatString: "DD-MMM"
+//             },
+//             axisY: {
+//                 prefix: "₹",
+//                 title: "Price (in INR)"
+//             },
+//             data: [{
+//                 type: "candlestick",
+//                 showInLegend: true,
+//                 name: "RELIANCE BSE",
+//                 yValueFormatString: "$###0.00",
+//                 xValueFormatString: "MMMM YY",
+//                 dataPoints:
+//                     // newdata
+//                     [
+//                         { x: new Date("2024-03-15"), y: [2854.95, 2866.45, 2826.9, 2837.25] },
+//                         { x: new Date("2024-03-14"), y: [2865, 2897.35, 2851, 2865.25] },
+//                         { x: new Date("2024-03-13"), y: [2955.45, 2965.95, 2855.85, 2864.7] },
+//                         { x: new Date("2024-03-12"), y: [2932, 2976.3, 2932, 2950.2] },
+//                         { x: new Date("2024-03-11"), y: [2984.7, 2984.7, 2927.35, 2931.2] },
+//                         { x: new Date("2024-03-07"), y: [3002.15, 3005.9, 2951.25, 2958.1] },
+//                         { x: new Date("2024-03-06"), y: [2989.45, 3019, 2957, 3005.95] },
+//                         { x: new Date("2024-03-05"), y: [3011.7, 3011.7, 2973, 2998.3] },
+//                         { x: new Date("2024-03-04"), y: [2981, 3024.8, 2975.05, 3011.6] },
+//                         { x: new Date("2024-03-03"), y: [2916.7, 2999, 2916.7, 2986] }
+//                     ]
 
-            }
-            ]
-        }
-        return (
-            <div>
-                < CanvasJSChart options={options}
-                    onRef={ref => this.chart = ref}
-                />
-                {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
-            </div >
-        );
-    }
-}
+//             }
+//             ]
+//         }
+//         return (
+//             <div>
+//                 < CanvasJSChart options={options}
+//                     onRef={ref => this.chart = ref}
+//                 />
+//                 {/*You can get reference to the chart instance as shown above using onRef. This allows you to access all chart properties and methods*/}
+//             </div >
+//         );
+//     }
+// }
