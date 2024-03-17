@@ -55,7 +55,7 @@ function SignUpForm({ onSubmit }) {
                     className="p-2 py-3 my-2 w-full rounded-lg !text-[12px] text-white bg-[#232222] outline-0 focus-visible:border-[#98DBAF] focus-visible:border-1 border-1 border-white" />
                 <ErrorMessage errors={errors} name="password" as="span" style={{ color: "red", fontSize: "11px" }} />
             </label>
-            <input type="submit" value="Sign up" className="my-2 w-full bg-[#0F3941] rounded-lg p-2 border-1 border-white hover:shadow-white hover:shadow-sm" />
+            <input type="submit" value="Sign up" className="my-2 w-full bg-[#9130F4] rounded-lg p-2 border-1 border-white hover:shadow-white hover:shadow-sm" />
         </form>
     )
 }

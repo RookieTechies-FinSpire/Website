@@ -37,7 +37,7 @@ function SignInForm({ onSubmit }) {
                 <ErrorMessage errors={errors} name="password" as="span" style={{ color: "red", fontSize: "11px" }} />
             </label>
             <p className="text-[12px] text-right">Forgot Password?</p>
-            <input type="submit" value="Sign in" className="w-full bg-[#0F3941] rounded-lg p-2 border-1 border-white hover:shadow-white hover:shadow-sm" />
+            <input type="submit" value="Sign in" className="w-full bg-[#9130F4] rounded-lg p-2 border-1 border-white hover:shadow-white hover:shadow-sm" />
         </form>
     )
 }
