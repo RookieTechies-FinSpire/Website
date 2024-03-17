@@ -108,17 +108,17 @@ export default function DashboardHeader() {
 }
 
 class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            data: props.prop,
-        }
-    }
-    componentDidUpdate(prevProps) {
-        if (prevProps.prop !== this.props.prop) {
-            this.setState({ data: this.props.prop });
-        }
-    }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         data: props.prop,
+    //     }
+    // }
+    // componentDidUpdate(prevProps) {
+    //     if (prevProps.prop !== this.props.prop) {
+    //         this.setState({ data: this.props.prop });
+    //     }
+    // }
 
     render() {
         // const chartdata = this.state.data["Time Series (Daily)"];
