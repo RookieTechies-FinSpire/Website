@@ -7,10 +7,10 @@ import { AuthContextProvider } from "./context/AuthContext";
 import { Providers } from "./components/providers/Providers";
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "FinSpire",
-  description: "A fintech app for making finance easy for you",
-};
+// export const metadata = {
+//   title: "FinSpire",
+//   description: "A fintech app for making finance easy for you",
+// };
 
 export default function RootLayout({ children }) {
   return (
