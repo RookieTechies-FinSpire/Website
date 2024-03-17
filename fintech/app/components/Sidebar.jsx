@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import { UserAuth } from "@/app/context/AuthContext";
+import { UserAuth } from "../context/AuthContext";
 import { FaHome } from "react-icons/fa";
 import { MdOutlineFeed, MdChatBubble, MdLogout } from "react-icons/md";
 import { IoIosSettings } from "react-icons/io";

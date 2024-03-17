@@ -1,6 +1,6 @@
 'use client'
 
-import { UserAuth } from "@/app/context/AuthContext";
+import { UserAuth } from "../context/AuthContext";
 import { FaSearch } from "react-icons/fa";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -93,7 +93,7 @@ export default function DashboardHeader() {
             console.error(error);
         }
     }
-
+console.log("api data ",APIData)
     return (
         <div>
             <header className="w-11/12 flex justify-between mt-4 items-center">
