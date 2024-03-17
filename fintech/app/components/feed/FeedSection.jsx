@@ -27,7 +27,7 @@ export default function FeedSection() {
         for (let i = 0; i < 20; i++) {
             getImageUrl(i);
         }
-    }, [getImageUrl]);
+    }, []);
 
     return (
         <div className="overflow-y-auto">
