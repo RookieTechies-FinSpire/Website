@@ -121,25 +121,26 @@ class App extends Component {
     }
 
     render() {
-        const chartdata = this.state.data["Time Series (Daily)"];
-        let newdata = [];
+        // const chartdata = this.state.data["Time Series (Daily)"];
+        // let newdata = [];
 
-        for (let key in chartdata) {
-            let date = new Date(key);
-            let open = chartdata[key]["1. open"];
-            let high = chartdata[key]["2. high"];
-            let low = chartdata[key]["3. low"];
-            let close = chartdata[key]["4. close"];
-            let val = { x: date, y: [open, high, low, close] }
-            newdata.push(val);
-        }
+        // for (let key in chartdata) {
+        //     let date = new Date(key);
+        //     let open = chartdata[key]["1. open"];
+        //     let high = chartdata[key]["2. high"];
+        //     let low = chartdata[key]["3. low"];
+        //     let close = chartdata[key]["4. close"];
+        //     let val = { x: date, y: [open, high, low, close] }
+        //     newdata.push(val);
+        // }
 
         const options = {
             theme: "dark1", // "light1", "light2", "dark1", "dark2"
             animationEnabled: true,
             exportEnabled: true,
             title: {
-                text: `${this.state.data["Meta Data"] ? this.state.data["Meta Data"]["2. Symbol"] : ""} Stock Price -  2024`
+                // text: `${this.state.data["Meta Data"] ? this.state.data["Meta Data"]["2. Symbol"] : ""} Stock Price -  2024`
+                text: `Reliance BSE Stock Price -  2024`
             },
             axisX: {
                 valueFormatString: "DD-MMM"
