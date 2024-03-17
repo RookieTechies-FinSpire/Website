@@ -1,6 +1,6 @@
 'use client'
 
-import { UserAuth } from "../context/AuthContext";
+import { UserAuth } from "../../context/AuthContext";
 import { FaSearch } from "react-icons/fa";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';

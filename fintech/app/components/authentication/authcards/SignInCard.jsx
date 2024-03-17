@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form"
 import Link from "next/link";
 import SocialLoginButton from "../SocialLoginButton";
 import { ErrorMessage } from "@hookform/error-message";
-import { UserAuth } from "../../context/AuthContext";
+import { UserAuth } from "../../../context/AuthContext";
 import { useRouter } from 'next/navigation';
 import toast, { Toaster } from 'react-hot-toast';
 import styles from "../../../../public/styles/signin.module.css";
