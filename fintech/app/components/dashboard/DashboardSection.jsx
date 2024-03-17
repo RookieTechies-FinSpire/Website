@@ -1,3 +1,5 @@
+'use client'
+
 import DashboardHeader from "./DashboardHeader";
 
 export default function DashboardSection() {
